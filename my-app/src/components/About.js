@@ -7,7 +7,7 @@ export default function About() {
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="transition-transform duration-200 title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Hello, I'm Nima. </h1>
-            <img className=""/>
+            <img className="/Users/nimanorouzi/nimanorouzi.github.io/my-app/src/components/Pictures/Nima.jpg"/>
            <p className="mb-8 leading-relaxed">
            As a Computer Science student at the University of British Columbia 
            and a recipient of the OIS award, I am fueled by my passion 
