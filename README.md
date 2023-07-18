@@ -1,2 +1,4 @@
 # nimanorouzi.github.io
-Personal website
+
+
+Personal website for Nima Norouzi.
