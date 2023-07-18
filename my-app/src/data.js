@@ -13,18 +13,11 @@ export const projects = [
     {
       title: "SMC",
       subtitle: "",
-      description:  "A soccer simulation club manage game"    ,
+      description:  "A soccer simulation clubadssadasdsaass lasmdalskdm aslkdmaskldmaslkmalksmklsdlksam dalskdm lkamd lkqwmd klqwmdlkq md lkqwmd lkqwmdlkaklsmdalkdmaslkdmal manage game"    ,
       image: "https://github.com/Nimanoro/nimanorouzi.github.io/blob/main/my-app/src/components/Pictures/Screen%20Shot%202023-07-17%20at%205.37.43%20PM.png?raw=true",
       link: "https://reedbarger.com",
     },
-    {
-      title: "DevChat",
-      subtitle: "React and Firebase",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./project-3.gif",
-      link: "https://jsbootcamp.com",
-    },
+    
     {
       title: "Translink App",
       subtitle: "An app make to never miss the bus again",
