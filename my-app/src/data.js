@@ -30,7 +30,7 @@ export const projects = [
       title: "Translink App",
       subtitle: "An app make to never miss the bus again",
       description: "This app was developed with translink api.",
-      image: "./project-4.gif",
+      image: "https://github.com/Nimanoro/nimanorouzi.github.io/blob/main/my-app/src/components/Pictures/Translink.png?raw=true",
       link: "https://pythonbootcamp.com",
     },
   ];
