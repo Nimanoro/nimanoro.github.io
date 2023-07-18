@@ -7,7 +7,7 @@ export const projects = [
       title:" Math2Latex May 2023 - Present",
       subtitle:"(Python, PyTorch, ScikitLearn, Matplotlib)",
       description:"Developing an application converting handwritten mathematic expression to latex script with a team of two.",
-      image: "my-app/src/components/Pictures/pi.jpeg",
+      image: "https://github.com/Nimanoro/nimanorouzi.github.io/blob/main/my-app/src/components/Pictures/pi.jpeg?raw=true",
       link: "https://reactbootcamp.com",
     },
     {
