@@ -7,7 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function App() {
   return (
-    <div className="text-gray-400 bg-gray-900 body-font">
+    <body> 
+      <div className="text-gray-400 bg-gray-900 body-font">
       <Router>
       <Navbar />
       <Routes>
@@ -18,5 +19,11 @@ export default function App() {
       </Routes>
     </Router>
     </div>
+    <div>
+      <About />
+      <Projects />
+      <Contact /> 
+    </div>
+    </body>
   );
 }
