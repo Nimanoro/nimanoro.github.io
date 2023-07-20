@@ -3,6 +3,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
+import Home from "./components/Home"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function App() {
@@ -12,7 +13,7 @@ export default function App() {
       <Router>
       <Navbar />
       <Routes>
-        <Route path='/' exact element={<App/>} />
+        <Route path='/Home' exact element={<Home />} />
         <Route path='/About' element={<About/>} />
         <Route path='/Projects' element={<Projects/>} />
         <Route path='/Contact' element={<Contact/>} />
@@ -20,9 +21,7 @@ export default function App() {
     </Router>
     </div>
     <div>
-      <About />
-      <Projects />
-      <Contact /> 
+
     </div>
     </body>
   );

@@ -1,9 +1,9 @@
 import React from "react";
-
+import "./button.css" 
 export default function About() {
   return (
     <section id="about">
-      <div className="container mx-auto flex px-0 py-20 md:flex-row flex-col items-center">
+      <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <div className="px-20 py-10">
           <img  src ="https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/Nima.jpg?raw=true"
             width="400" 
@@ -19,16 +19,16 @@ export default function About() {
            ideas, technologies, and projects to broaden my horizons and push 
            the boundaries of what is possible.
           </p>
-          <div className="flex px-20 md:px-10 justify-items-center">
+          <div className="flex px-20 md:px-20 justify-items-center">
             <a
               href="contact"
-              className="inline-flex  text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
-              Work With Me
+              className="inline-flex  btn-5 text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
+              <span>Work With Me</span>
             </a>
             <a
               href="projects"
-              className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-               My Past Works
+              className="ml-4 btn-5 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
+               <span>My Past Works</span>
               
             </a>
             

@@ -1,5 +1,7 @@
 
 import React from "react";
+import { SocialIcon } from 'react-social-icons';
+
 
 export default function Contact() {
   const [name, setName] = React.useState("");
@@ -31,6 +33,7 @@ export default function Contact() {
         <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6">
+              
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 ADDRESS
               </h2>
@@ -38,6 +41,7 @@ export default function Contact() {
                 6346 Hawthorn lane <br />
                 Vancouver, BC
               </p>
+              
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
@@ -49,7 +53,16 @@ export default function Contact() {
               <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
                 PHONE
               </h2>
-              <p className="leading-relaxed">604-78167610</p>
+              <p className="leading-relaxed pb-4">604-78167610</p>
+              <div class="button-group minor-group">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+                <a href="https://www.linkedin.com/in/nima-norouzi-28b63a237/" className="fa fa-linkedin-square pr-5"/>     
+                <a href="https://github.com/Nimanoro" className="fa fa-github-square pr-5"/>
+                <a href="https://nimanourozy@gmail.com" className="fa fa-google pr-5"/>
+                <a href="https://www.instagram.com/nima_.norouzi/?hl=en" className="fa fa-instagram pr-5"/>
+
+                
+            </div>
             </div>
           </div>
         </div>
