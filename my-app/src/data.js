@@ -14,7 +14,7 @@ export const projects = [
       title: "SMC July 2023 – present",
       subtitle: "Java OOP, JUnit, Swing",
       description:  "A soccer Manager simulation game developed by Java and swing. Testing of the project was done using JUnit library. Which	Enable user to compete against ten teams in the league and gain coin and update their players to make progress through the game.",
-      image: "https://github.com/Nimanoro/nimanoro.github.io/blob/main/src/components/Pictures/Screen%20Shot%202023-07-17%20at%205.37.43%20PM.png?raw=true",
+      image: "https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/Screen%20Shot%202023-07-17%20at%205.37.43%20PM.png?raw=true",
       link: "https://reedbarger.com",
     },
     
@@ -22,7 +22,7 @@ export const projects = [
       title: "Translink Tracker January 2023",
       subtitle: "(Python, API)",
       description: "•	Developed a real-time bus stop tracker using the official Vancouver public transportation API and python. •	Implemented route number and time filters to make it easier for users to find the right bus." ,
-      image: "https://github.com/Nimanoro/nimanoro.github.io/blob/main/src/components/Pictures/Translink.png?raw=true",
+      image: "https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/Translink.png?raw=true",
       link: "https://github.com/Nimanoro/translink-project",
     },
   ];
