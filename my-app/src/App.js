@@ -10,7 +10,7 @@ export default function App() {
   return (
     <body> 
       <div className="text-gray-400 bg-gray-900 body-font">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
       <Navbar />
       <Routes>
         <Route path='/'  element={<Home />} />
