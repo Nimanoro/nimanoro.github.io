@@ -13,10 +13,10 @@ export default function App() {
       <HashRouter basename={process.env.PUBLIC_URL}>
       <Navbar />
       <Routes>
-        <Route path='/'  element={<Home />} />
-        <Route path='/About' element={<About/>} />
-        <Route path='/Projects' element={<Projects/>} />
-        <Route path='/Contact' element={<Contact/>} />
+        <Route exact path='/'  element={<Home />} />
+        <Route exact path='/About' element={<About/>} />
+        <Route exact path='/Projects' element={<Projects/>} />
+        <Route exact path='/Contact' element={<Contact/>} />
       </Routes>
     </HashRouter>
     </div>
