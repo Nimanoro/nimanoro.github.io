@@ -15,7 +15,7 @@ export const projects = [
       subtitle: "Java OOP, JUnit, Swing",
       description:  "A soccer Manager simulation game developed by Java and swing. Testing of the project was done using JUnit library. Which	Enable user to compete against ten teams in the league and gain coin and update their players to make progress through the game.",
       image: "https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/Screen%20Shot%202023-07-17%20at%205.37.43%20PM.png?raw=true",
-      link: "https://reedbarger.com",
+      link: "",
     },
     
     {
