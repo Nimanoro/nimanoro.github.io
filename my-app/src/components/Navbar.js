@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div>
     <nav class="navbar background">
-        <ul class="nav-list">
+        <ul class="nav-list sm:w-full">
             
             <li><a href="#/">Home</a></li>
             <li><a href="#/Projects">Projects</a></li>
