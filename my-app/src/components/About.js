@@ -5,7 +5,7 @@ export default function About() {
     <section id="about">
       <div className="container mx-auto flex px-10 pt-20  md:flex-row flex-col items-center">
         <div className="px-20 py-1 hero container max-w-screen-lg mx-auto flex">
-          <img  src ="https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/Nima.jpg?raw=true"
+          <img  src ="https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/Screen%20Shot%202023-07-24%20at%201.11.02%20PM.png?raw=true"
             width="400" 
             height="200"
             className="mx-auto"/>
