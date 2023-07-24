@@ -25,7 +25,7 @@ export default function Projects() {
               <div className="flex relative w-96 h-96 r p-4">
                 <img
                   alt="Project Picture"
-                  className="absolute  object-fill inset-0 object-scale-down h-96 w-96 object-center"
+                  className="absolute   inset-0 h-96 w-96 object-center px-4"
                   src={project.image}
                 />
                 <div className=" px-8 py-10 z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
