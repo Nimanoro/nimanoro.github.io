@@ -22,10 +22,10 @@ export default function Projects() {
               href={project.link}
               key={project.image}
               className="sm:w-1/2  p-4">
-              <div className="flex relative w-96 h-96 r p-4">
+              <div className="flex relative w-48 h-48 sm:h-96 sm:w-96  p-4">
                 <img
                   alt="Project Picture"
-                  className="absolute   inset-0 h-96 w-96 object-center px-4"
+                  className="absolute inset-0 h-48 w-48 sm:h-96 sm:w-96 object-center px-4"
                   src={project.image}
                 />
                 <div className=" px-8 py-10 z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
