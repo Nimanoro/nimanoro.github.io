@@ -18,6 +18,15 @@ export const projects = [
       link: "https://nimanoro.github.io/#/Projects",
     },
     
+
+    {
+      title: "Apple Music listened-to organizer March 2023",
+      subtitle: "(Python, XMLParser Library, Sqlite3)",
+      description: "This app can parse your xml history of apple music and create a database based on the music you listened to." ,
+      image: "https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/Translink.png?raw=true",
+      link: "https://github.com/Nimanoro/translink-project",
+    }, 
+
     {
       title: "Translink Tracker January 2023",
       subtitle: "(Python, API)",
