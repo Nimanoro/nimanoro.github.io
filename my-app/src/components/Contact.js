@@ -38,7 +38,6 @@ export default function Contact() {
                 ADDRESS
               </h2>
               <p className="mt-1">
-                6346 Hawthorn lane <br />
                 Vancouver, BC
               </p>
               
@@ -50,10 +49,6 @@ export default function Contact() {
               <a className="text-indigo-400 leading-relaxed">
                 Nimanorouzy@gmail.com
               </a>
-              <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
-                PHONE
-              </h2>
-              <p className="leading-relaxed pb-4">604-78167610</p>
               <div class="button-group minor-group">
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
                 <a href="https://www.linkedin.com/in/nima-norouzi-28b63a237/" className="fa fa-linkedin-square pr-5"/>     

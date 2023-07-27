@@ -4,8 +4,8 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <div>
-    <nav class="navbar background">
-        <ul class="nav-list sm:w-full">
+    <nav class="navbar background h-100% w-100%  overflow-x-hidden ">
+        <ul class="nav-list sm:w-full ">
             
             <li><a href="#/">Home</a></li>
             <li><a href="#/Projects">Projects</a></li>

@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section id="about">
       <div className="container mx-auto flex px-10 pt-20  md:flex-row flex-col items-center">
-        <div className="px-20 py-1 hero container max-w-screen-lg mx-auto flex">
+        <div className="px-10 sm:px-20 py-1 hero container max-w-screen-lg mx-auto flex">
           <img  src ="https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/Screen%20Shot%202023-07-24%20at%201.20.11%20PM.png?raw=true"
             width="400" 
             height="200"
@@ -31,13 +31,13 @@ export default function About() {
 
             <p className="mb-10 px-0 sm:px-0 sm:leading-relaxed">When I'm not coding or studying, you'll find me
                 playing volleyball or watching soccer.
-                Beside sports, I lob=ve playing chess and creating beats that enables me to explore the 
+                Beside sports, I love playing chess and creating beats that enables me to explore the 
                 world of music production.</p>
 
 
             <p className="mb-10 px-0 sm:px-0 sm:leading-relaxed"> In a nutshell, I'm a computer science enthusiast with a flair for 
               creativity and a love for connecting with others. 
-              If you share any of these interests or simply want to chat about tech,
+              If you share any of these interests or simply want to chat about sports, tech,
                music, or life in general, feel free to reach out—I'm always up for a 
                good conversation! </p>
           </div>
