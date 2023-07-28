@@ -22,20 +22,20 @@ export default function Projects() {
               href={project.link}
               key={project.image}
               className="sm:w-1/2  p-4">
-              <div className="flex relative w-48 h-48 sm:h-96 sm:w-96  p-4">
+              <div className="flex relative w-72 h-72 sm:h-96 sm:w-96  p-4">
                 <img
                   alt="Project Picture"
-                  className="absolute inset-0 h-48 w-48 sm:h-96 sm:w-96 object-center px-4"
+                  className="absolute inset-0 h-72 w-72 sm:h-96 sm:w-96 object-center px-4"
                   src={project.image}
                 />
-                <div className=" absolute leading-9	inset-0 w-48 h-48 sm:h-96 sm:w-96 px-0 sm:px-8 py:0 sm:py-10 z-10  border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                  <p className="tracking-widest text-center sm:text-lg text-sm text-ellipsis title-font  text-green-400 mb-2">
+                <div className=" absolute leading-9	inset-0 w-72 h-72 sm:h-96 sm:w-96 px-0 sm:px-8 py:0 sm:py-10 z-10  border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+                  <p className="tracking-widest text-center sm:text-lg text-md text-ellipsis title-font  text-green-400 mb-2">
                     {project.subtitle}
                   </p>
-                  <h1 className="tracking-widest title-font sm:text-lg text-sm font-medium text-white sm:mb-0 mb-2">
+                  <h1 className="tracking-widest title-font sm:text-lg text-md font-medium text-white sm:mb-0 mb-2">
                     {project.title}
                   </h1>
-                  <h1 className="tracking-widest title-font sm:text-lg text-sm font-medium text-white mb-3">
+                  <h1 className="tracking-widest title-font sm:text-lg text-md font-medium text-white mb-3">
                     {project.date}
                   </h1>
                   <p className="hidden md:block leading-relaxed">{project.description}</p>

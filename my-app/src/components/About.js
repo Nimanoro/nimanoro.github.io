@@ -1,16 +1,13 @@
 import React from "react";
 import "./button.css" 
+import Gallery from "./gallery";
 export default function About() {
   return (
     <section id="about">
-      <div className="container mx-auto flex px-10 pt-20  md:flex-row flex-col items-center">
-        <div className="px-10 sm:px-20 py-1 hero container max-w-screen-lg mx-auto flex">
-          <img  src ="https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/Screen%20Shot%202023-07-24%20at%201.20.11%20PM.png?raw=true"
-            width="400" 
-            height="200"
-            className="mx-auto"/>
-        </div>
-        </div>
+      <div className="justify-items-center align-center pt-10 w-100% sm:w-50% h-auto items-center">
+      <Gallery/>
+      </div>
+      
         <div className= 'container mx-auto flex px-10 py-20 md:flex-row flex-col items-center'>
         <div className="justify-end lg:flex-grow  lg:px-24 md:px-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
            <div><p className="mb-10 px-0 sm:px-0 sm:leading-relaxed">
