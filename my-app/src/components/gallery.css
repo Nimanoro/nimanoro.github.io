@@ -12,6 +12,18 @@ body {
     margin-left: auto;
     margin-right: auto;
     width:  40%;
+    
+  }
+
+  @media screen and (max-width: 600){
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:  100%;
+      }
+      
+    
   }
   
   /* Position the image container (needed to position the left and right arrows) */
@@ -62,7 +74,10 @@ body {
   .numbertext {
     color: #f2f2f2;
     font-size: 12px;
-    padding: 8px 12px;
+    padding-top: 50px;
+     padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
     position: absolute;
     top: 0;
   }
@@ -70,7 +85,6 @@ body {
   /* Container for image text */
   .caption-container {
     text-align: center;
-    background-color: #222;
     padding: 2px 16px;
     color: white;
   }
@@ -81,8 +95,10 @@ body {
     clear: both;
   }
   
-  /* Six columns side by side */
+  /* Four columns side by side */
   .column {
+    margin-left: auto;
+    margin-right: auto;
     float: left;
     width: 25%;
   }

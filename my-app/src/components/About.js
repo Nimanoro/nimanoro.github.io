@@ -4,7 +4,7 @@ import Gallery from "./gallery";
 export default function About() {
   return (
     <section id="about">
-      <div className="justify-items-center align-center pt-10 w-100% sm:w-50% h-auto items-center">
+      <div className="justify-items-center align-center pt-10 w-50% sm:w-50% h-auto items-center">
       <Gallery/>
       </div>
       
