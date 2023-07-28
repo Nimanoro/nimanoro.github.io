@@ -1,30 +1,36 @@
 
 import React from "react";
 import { SocialIcon } from 'react-social-icons';
-
+import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
 
 export default function Contact() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
 
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  }
+const SERVICE_ID = "service_7idzuno";
+const TEMPLATE_ID = "template_lucwnl3";
+const PUBLIC_KEY = "1y6yb9KMKX5PrXa3Z";
 
-  function handleSubmit(e) {
+const handleOnSubmit = (e) => {
     e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
-    })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert(error));
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+      .then((result) => {
+        console.log(result.text);
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent Successfully",
+        })
+      }, (error) => {
+        console.log(error.text);
+        Swal.fire({
+          icon: "error",
+          title: "Ooops, something went wrong",
+          text: error.text,
+        })
+      });
+    e.target.reset()
   }
 
   return (
@@ -62,9 +68,8 @@ export default function Contact() {
           </div>
         </div>
         <form
-          netlify
           name="contact"
-          onSubmit={handleSubmit}
+          onSubmit={handleOnSubmit}
           className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
           <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
             Contact me
@@ -119,3 +124,5 @@ export default function Contact() {
     </section>
   );
 }
+
+  

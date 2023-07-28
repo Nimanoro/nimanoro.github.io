@@ -30,12 +30,12 @@ export default function Home() {
           <div className="flex px-20 md:px-20 justify-items-center align-center">
             <a
               href="#/contact"
-              className="mr-4 inline-flex  btn-5 text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
+              className="mr-4 inline-flex  text-center btn-5 text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
               <span>Work With Me</span>
             </a>
             <a
               href="#/projects"
-              className="ml-4 btn-5 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
+              className="ml-4 text-center btn-5 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
                <span>My Past Works</span>
               
             </a>
