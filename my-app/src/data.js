@@ -43,7 +43,7 @@ export const projects = [
       title: "Steganography",
       date: "August 2023",
       subtitle: "(Python, OpenCV, Cryptography)",
-      description: "Steganography Project is a Python-based implementation of steganography, which allows you to hide secret messages within image files using the Least Significant Bit (LSB) technique. Steganography is the art of concealing sensitive information within another seemingly innocent medium to avoid detection. This project aims to provide a simple and user-friendly tool for encoding and decoding hidden messages in images." ,
+      description: "Steganography is the art of concealing sensitive information within another seemingly innocent medium to avoid detection. This project aims to provide a simple and user-friendly tool for encoding and decoding hidden messages in images." ,
       image: "https://github.com/Nimanoro/Steganography/raw/main/images/Comparison.png",
       link: "https://github.com/Nimanoro/Steganography",
     },
