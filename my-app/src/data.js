@@ -44,7 +44,7 @@ export const projects = [
       date: "August 2023",
       subtitle: "(Python, OpenCV, Cryptography)",
       description: "Steganography is the art of concealing sensitive information within another seemingly innocent medium to avoid detection. This project aims to provide a simple and user-friendly tool for encoding and decoding hidden messages in images." ,
-      image: "https://github.com/Nimanoro/Steganography/raw/main/images/Comparison.png",
+      image: "https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/sample.png",
       link: "https://github.com/Nimanoro/Steganography",
     },
   ];
