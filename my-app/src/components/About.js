@@ -1,50 +1,40 @@
 import React from "react";
-import "./button.css" 
 import Gallery from "./gallery";
+
 export default function About() {
   return (
-    <section id="about">
-      <div className="justify-items-center align-center pt-10 w-50% sm:w-50% h-auto items-center">
-      <Gallery/>
-      </div>
-      
-        <div className= 'container mx-auto flex px-10 py-20 md:flex-row flex-col items-center'>
-        <div className="justify-end lg:flex-grow  lg:px-24 md:px-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-           <div><p className="mb-10 px-0 sm:px-0 sm:leading-relaxed">
-           Hey there! I'm Nima Norouzi, a computer science student based in Vancouver, British Columbia. I'm pursuing a Bachelor of Science in Computer Science at the University of British Columbia.
-           </p>
-
-           <p className="mb-10 px-0 sm:px-0 sm:leading-relaxed">My academic journey has been both challenging and rewarding. 
-            From understanding the core structures of computation to mastering programming 
-            languages like Python, Java, and Racket, I've embraced every opportunity to
-             expand my knowledge and skills.</p>
-
-            <p className="mb-10 px-0 sm:px-0 sm:leading-relaxed"> Outside of academics, I find joy in creative projects.
-                  I've worked on a Java-based soccer manager simulation game,
-                  where players can compete against various teams and strategize
-                 their way to victory. Additionally, I'm part of a team developing 
-                 "Math2Latex," an innovative application that converts handwritten 
-                 mathematical expressions into LaTeX scripts.</p>
-
-            <p className="mb-10 px-0 sm:px-0 sm:leading-relaxed">When I'm not coding or studying, you'll find me
-                playing volleyball or watching soccer.
-                Beside sports, I love playing chess and creating beats that enables me to explore the 
-                world of music production.</p>
-
-
-            <p className="mb-10 px-0 sm:px-0 sm:leading-relaxed"> In a nutshell, I'm a computer science enthusiast with a flair for 
-              creativity and a love for connecting with others. 
-              If you share any of these interests or simply want to chat about sports, tech,
-               music, or life in general, feel free to reach out—I'm always up for a 
-               good conversation! </p>
-          </div>
-    
-
-
-
+    <section id="about" className="bg-black text-white py-20 px-6 sm:px-10">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
+        {/* Gallery */}
+        <div className="w-full md:w-1/2 flex justify-center">
+          <Gallery />
         </div>
-          
-        
+
+        {/* Text */}
+        <div className="w-full md:w-1/2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-green-400 mb-6">
+            Who I Am
+          </h2>
+
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            I’m <span className="text-white font-semibold">Nima Norouzi</span>, a Computer Science student at UBC — but more than that, I’m a builder. I love turning ideas into real, working things that people actually use.
+          </p>
+
+          <p className="text-gray-300 leading-relaxed mb-6">
+            Whether I’m crafting a Java-based soccer sim, translating messy math into LaTeX, or coding up stretch apps and indie tools — my focus stays the same:
+            <span className="block mt-2 text-white font-medium italic">Make it clean. Make it useful. Make it hit.</span>
+          </p>
+
+          <div className="text-gray-300 space-y-4 mb-6">
+            <p>🧠 What I know: Python, Java, Racket, React, Node, Tailwind</p>
+            <p>🎮 What I’ve built: Self-driving cars, AI fitness coaches, music tools, productivity apps</p>
+            <p>🧩 What I love: Volleyball, soccer, chess, beatmaking, surreal films, and writing things that matter</p>
+          </div>
+
+          <p className="text-gray-300 leading-relaxed">
+            I’m always down to talk code, startups, creative work, or just life in general. If anything here resonated with you — reach out. Let’s build something cool.
+          </p>
+        </div>
       </div>
     </section>
   );
