@@ -1,40 +1,71 @@
 import React from "react";
 import Gallery from "./gallery";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="bg-black text-white py-20 px-6 sm:px-10">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
-        {/* Gallery */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <Gallery />
-        </div>
-
-        {/* Text */}
-        <div className="w-full md:w-1/2">
-          <h2 className="text-3xl sm:text-4xl font-bold text-green-400 mb-6">
-            Who I Am
+    <section
+      id="about"
+      className="bg-gradient-to-br from-black via-gray-900 to-black text-white py-28 px-6 sm:px-12"
+    >
+      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center md:items-start gap-12">
+        {/* Text Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="w-full md:w-1/2"
+        >
+          <h2 className="text-4xl sm:text-5xl font-bold text-green-400 mb-8">
+            Behind the Code
           </h2>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            I’m <span className="text-white font-semibold">Nima Norouzi</span>, a Computer Science student at UBC — but more than that, I’m a builder. I love turning ideas into real, working things that people actually use.
+            I’m <span className="text-white font-semibold">Nima Norouzi</span> — a builder, a creative, and a Computer Science student at UBC. But more than that? I’m obsessed with making ideas real.
           </p>
 
-          <p className="text-gray-300 leading-relaxed mb-6">
-            Whether I’m crafting a Java-based soccer sim, translating messy math into LaTeX, or coding up stretch apps and indie tools — my focus stays the same:
-            <span className="block mt-2 text-white font-medium italic">Make it clean. Make it useful. Make it hit.</span>
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            I don’t just write code. I ship. From a soccer sim in Java to a stretching app that hit 300+ users in one week — I chase ideas hard and fast. I’m not afraid to iterate, pivot, or rebuild until it works and feels good.
+            <span className="block mt-2 text-white font-medium italic">
+              No fluff. Just momentum.
+            </span>
           </p>
 
-          <div className="text-gray-300 space-y-4 mb-6">
-            <p>🧠 What I know: Python, Java, Racket, React, Node, Tailwind</p>
-            <p>🎮 What I’ve built: Self-driving cars, AI fitness coaches, music tools, productivity apps</p>
-            <p>🧩 What I love: Volleyball, soccer, chess, beatmaking, surreal films, and writing things that matter</p>
+          <div className="bg-gray-800/40 rounded-lg p-4 sm:p-6 mb-8 space-y-4 text-sm sm:text-base">
+            <p>
+              🧠 <span className="text-white font-medium">Tech Stack:</span>{" "}
+              Python, Java, Racket, React, Node.js, Tailwind
+            </p>
+            <p>
+              🛠️{" "}
+              <span className="text-white font-medium">What I Build:</span>{" "}
+              Self-driving car AI, fitness coaches, music tools, productivity SaaS, handwriting-to-LaTeX converters
+            </p>
+            <p>
+              🎯{" "}
+              <span className="text-white font-medium">Outside the Code:</span>{" "}
+              Volleyball 🏐, Chess ♟, Beatmaking 🎧, Surreal Films 🎥, Late-night writing ✍️
+            </p>
           </div>
 
-          <p className="text-gray-300 leading-relaxed">
-            I’m always down to talk code, startups, creative work, or just life in general. If anything here resonated with you — reach out. Let’s build something cool.
+          <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
+            If you're into building weird, useful, or beautiful things — or just want to connect — I’m always down to chat. Let’s create something worth remembering.
           </p>
-        </div>
+        </motion.div>
+
+        {/* Gallery */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="w-full md:w-1/2 flex justify-center"
+        >
+          <div className="rounded-lg overflow-hidden shadow-2xl hover:scale-[1.03] transition-transform duration-300 ease-in-out">
+            <Gallery />
+          </div>
+        </motion.div>
       </div>
     </section>
   );

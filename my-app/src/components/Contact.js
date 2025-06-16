@@ -1,128 +1,131 @@
-
-import React from "react";
-import { SocialIcon } from 'react-social-icons';
+import React, { useState } from "react";
+import { SocialIcon } from "react-social-icons";
+import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 
 export default function Contact() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-const SERVICE_ID = "service_7idzuno";
-const TEMPLATE_ID = "template_lucwnl3";
-const PUBLIC_KEY = "1y6yb9KMKX5PrXa3Z";
+  const SERVICE_ID = "service_7idzuno";
+  const TEMPLATE_ID = "template_lucwnl3";
+  const PUBLIC_KEY = "1y6yb9KMKX5PrXa3Z";
 
-const handleOnSubmit = (e) => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
-      .then((result) => {
-        console.log(result.text);
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
+      () => {
         Swal.fire({
           icon: "success",
-          title: "Message Sent Successfully",
-        })
-      }, (error) => {
-        console.log(error.text);
+          title: "Message Sent!",
+          text: "I'll get back to you soon.",
+        });
+      },
+      (error) => {
         Swal.fire({
           icon: "error",
-          title: "Ooops, something went wrong",
+          title: "Something went wrong",
           text: error.text,
-        })
-      });
-    e.target.reset()
-  }
+        });
+      }
+    );
+    e.target.reset();
+  };
 
   return (
-    <section id="contact" className="relative">
-      <div className="container px-5 py-20 mx-auto flex sm:flex-nowrap flex-wrap">
-        <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-          <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
-            <div className="lg:w-1/2 px-6">
-              
-              <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-                ADDRESS
+    <section
+      id="contact"
+      className="bg-gradient-to-br from-black via-gray-900 to-black text-white py-28 px-6 sm:px-12"
+    >
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+        {/* Info Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="w-full md:w-1/2 bg-gray-900 p-10 rounded-xl shadow-xl flex flex-col justify-between"
+        >
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-green-400 text-sm font-semibold tracking-widest mb-1">
+                LOCATION
               </h2>
-              <p className="mt-1">
-                Vancouver, BC
-              </p>
-              
+              <p className="text-lg text-gray-300">Vancouver, BC</p>
             </div>
-            <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-              <h2 className="title-font font-semibold text-white tracking-widest text-xs">
+            <div>
+              <h2 className="text-green-400 text-sm font-semibold tracking-widest mb-1">
                 EMAIL
               </h2>
-              <a className="text-indigo-400 leading-relaxed">
-                Nimanorouzy@gmail.com
-              </a>
-              <div class="button-group minor-group">
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-                <a href="https://www.linkedin.com/in/nima-norouzi-28b63a237/" className="fa fa-linkedin-square pr-5"/>     
-                <a href="https://github.com/Nimanoro" className="fa fa-github-square pr-5"/>
-                <a href="https://nimanourozy@gmail.com" className="fa fa-google pr-5"/>
-                <a href="https://www.instagram.com/nima_.norouzi/?hl=en" className="fa fa-instagram pr-5"/>
+              <p className="text-indigo-400 text-lg">Nimanorouzy@gmail.com</p>
+            </div>
+            <div>
+              <h2 className="text-green-400 text-sm font-semibold tracking-widest mb-2">
+                SOCIAL
+              </h2>
+              <div className="flex gap-4">
+                <SocialIcon url="https://linkedin.com/in/nima-norouzi-28b63a237/" bgColor="#4ade80" />
+                <SocialIcon url="https://github.com/Nimanoro" bgColor="#4ade80" />
+                <SocialIcon url="mailto:nimanourozy@gmail.com" bgColor="#4ade80" />
+                <SocialIcon url="https://instagram.com/nima_.norouzi" bgColor="#4ade80" />
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
-                
-            </div>
-            </div>
-          </div>
-        </div>
-        <form
-          name="contact"
+        {/* Contact Form */}
+        <motion.form
           onSubmit={handleOnSubmit}
-          className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
-            Contact me
+          name="contact"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="w-full md:w-1/2 bg-gray-900 p-10 rounded-xl shadow-xl flex flex-col gap-6"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2">
+            Let’s Connect
           </h2>
-          <p className="leading-relaxed mb-5">
-            You can be in touch with me using this form.
+          <p className="text-gray-400 mb-4">
+            Have a project, collaboration, or just a thought? Send me a message.
           </p>
-          <div className="relative mb-4">
-            <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="relative mb-4">
-            <label
-              htmlFor="message"
-              className="leading-7 text-sm text-gray-400">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setMessage(e.target.value)}
-            />
-          </div>
+
+          <input
+            name="name"
+            type="text"
+            placeholder="Your Name"
+            required
+            onChange={(e) => setName(e.target.value)}
+            className="bg-gray-800 text-white rounded px-4 py-3 border border-gray-700 focus:ring-2 focus:ring-green-400 outline-none"
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="Your Email"
+            required
+            onChange={(e) => setEmail(e.target.value)}
+            className="bg-gray-800 text-white rounded px-4 py-3 border border-gray-700 focus:ring-2 focus:ring-green-400 outline-none"
+          />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+            onChange={(e) => setMessage(e.target.value)}
+            className="bg-gray-800 text-white rounded px-4 py-3 border border-gray-700 resize-none focus:ring-2 focus:ring-green-400 outline-none"
+          ></textarea>
+
           <button
             type="submit"
-            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-            Submit
+            className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-200"
+          >
+            Send Message
           </button>
-        </form>
+        </motion.form>
       </div>
     </section>
   );
 }
 
-  
