@@ -1,28 +1,30 @@
 import React from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-import Home from "./components/Home"
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import Home from "./components/Home";
+import CaseStudies from "./components/CaseStudies";
+import CaseStudyTemplate from "./components/CaseStudyTemplate";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/layout";
 
 export default function App() {
   return (
-    <body> 
+    <body>
       <div className="text-gray-400 bg-gray-900 body-font">
-      <HashRouter basename={process.env.PUBLIC_URL}>
-      <Navbar />
-      <Routes>
-        <Route exact path='/'  element={<Home />} />
-        <Route exact path='/About' element={<About/>} />
-        <Route exact path='/Projects' element={<Projects/>} />
-        <Route exact path='/Contact' element={<Contact/>} />
-      </Routes>
-    </HashRouter>
-    </div>
-    <div>
-
-    </div>
+        <HashRouter basename={process.env.PUBLIC_URL}>
+          <Routes>
+            <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/work" element={<CaseStudies/>} />
+            <Route path="/work/:slug" element={<CaseStudyTemplate />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            </Route>
+          </Routes>
+        </HashRouter>
+      </div>
     </body>
   );
 }
