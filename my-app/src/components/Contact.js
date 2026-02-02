@@ -15,7 +15,7 @@ import {
 const LINKEDIN_URL = "https://linkedin.com/in/nima-norouzi-28b63a237/";
 const GITHUB_URL = "https://github.com/Nimanoro";
 const INSTAGRAM_URL = "https://instagram.com/nima_.norouzi";
-const RESUME_URL = "/Resume.png";
+const RESUME_URL = "/Resume.pdf";
 
 const fUp = {
   hidden: { opacity: 0, y: 16 },
@@ -164,9 +164,7 @@ export default function Contact() {
             </div>
 
             <div className="mt-12 pt-8 border-t border-gray-900/50">
-                <span className="text-[10px] font-mono text-gray-600 uppercase tracking-widest">
-                    UBC_CS_SENIOR // ENGR_COOP_ACTIVE
-                </span>
+                
             </div>
           </motion.div>
 
@@ -189,7 +187,7 @@ export default function Contact() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <ActionCard
-                href={RESUME_URL}
+                to={RESUME_URL}
                 icon={FiFileText}
                 title="Resume"
                 subtitle="Technical History"
@@ -205,7 +203,7 @@ export default function Contact() {
             {/* Social Row */}
             <div className="bg-[#0d0d0d] border border-gray-900 rounded-2xl p-10">
               <span className="text-[11px] text-gray-500 uppercase font-bold tracking-[0.2em] block mb-7">
-                Social_Verification
+                Social Verification
               </span>
 
               <div className="flex flex-wrap gap-5 items-center">
@@ -228,13 +226,6 @@ export default function Contact() {
                   className="hover:scale-110 transition-transform !h-12 !w-12 border border-gray-800 rounded-full"
                 />
               </div>
-
-              <div className="mt-8 flex items-center gap-3 text-gray-600 text-[11px] font-bold uppercase tracking-tight">
-                <FiLinkedin className="w-4 h-4 text-green-500/50" />
-                <span>
-                  Recruiters: Include role, location, and timeline.
-                </span>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -242,7 +233,7 @@ export default function Contact() {
         {/* --- Footer Status --- */}
         <div className="mt-20 text-center">
           <p className="font-mono text-[10px] text-gray-700 uppercase tracking-[0.5em]">
-            Connection: Stable // Updated: Jan 2026
+            Updated: Jan 2026
           </p>
         </div>
       </div>

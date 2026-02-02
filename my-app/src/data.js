@@ -158,29 +158,7 @@ export const flagshipCaseStudies = [
 // ─── Tier B: Shipped experiments (smaller grid, still with screenshot) ─────
 export const shippedExperiments = [
 
-  {
-    slug: "sign-language-detection",
-    title: "Sign Language Detection",
-    oneLiner: "Real-time hand sign detection pipeline with a webcam loop.",
-    outcome: "Working demo with real-time inference; extensible pipeline.",
-    built:
-      "Webcam capture + hand landmark detection + classifier for mapping gestures to labels.",
-    hardPart:
-      "Occlusion, jitter, and balancing vocabulary size against accuracy.",
-    result:
-      "A practical demo and a base for expanding gesture sets.",
-    stack: ["Python", "MediaPipe", "OpenCV", "Scikit-learn"],
-    image:
-      "https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/signlang.png?raw=true",
-    links: {
-      live: null,
-      github: "https://github.com/Nimanoro/Sign-language-detection",
-      writeup: null,
-    },
-    date: "Jul 2024",
-    tags: ["ML", "CV", "Realtime"],
-    visibility: "public",
-  },
+  
   {
     slug: "number-detector",
     title: "Number Detector",
@@ -211,6 +189,22 @@ export const shippedExperiments = [
     tags: ["Systems", "Game"],
     visibility: "public",
   },
+  {
+    slug: "pong-evolving-ai",
+    title: "Pong Game with Evolving AI",
+    description:
+      "Pygame Pong where agents learn to play via a genetic algorithm, with saved NN models and training data artifacts.",
+    image: "Pictures/pong_genetics.png", // add a screenshot here (worth it)
+    links: {
+      github: "https://github.com/Nimanoro/Pygame_experiment",
+      live: null,
+    },
+    stack: ["Python", "Pygame", "Genetic Algorithms", "Neural Networks", "NumPy"],
+    date: "Sep 2024 – Present",
+    tags: ["Game", "AI", "Simulation"],
+    visibility: "public",
+  },
+  
   {
     slug: "self-driving-car-sim",
     title: "Self-Driving Car Simulation",
@@ -246,7 +240,7 @@ export const shippedExperiments = [
     title: "Stock Portfolio Analyzer",
     description: "Portfolio simulation + indicators (RSI, MACD, Bollinger) with per-stock charts.",
     image:
-      "Pictures/stock-portfolio.png",
+      "/Pictures/stock-portfolio.png",
     links: {
       github: "https://github.com/Nimanoro/Stock-portfolio",
       live: null,
@@ -276,26 +270,11 @@ export const labPrototypes = [
     visibility: "public",
   },
   {
-    slug: "fsm-playground",
-    title: "Finite State Machine Playground",
-    description: "FSM visualizer and simulator (DFAs, NFAs, ε-transitions).",
-    image:
-      "https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/fsm.png?raw=true",
-    links: {
-      github: "https://github.com/Nimanoro/Finite-state-machine",
-      live: null,
-    },
-    stack: ["Python", "Graphviz", "Automata"],
-    date: "Oct 2024",
-    tags: ["Theory", "Tools"],
-    visibility: "public",
-  },
-  {
     slug: "pybullet-walker",
     title: "PyBullet Walker",
     description: "Custom biped setup with sensors + control hooks (built for RL environment work).",
     image:
-      "https://github.com/Nimanoro/nimanoro.github.io/blob/main/my-app/src/components/Pictures/pybullet.png?raw=true",
+      "/Pictures/pybullet.jpeg",
     links: {
       github: "https://github.com/Nimanoro/PyBullet-walker",
       live: null,

@@ -8,7 +8,7 @@ import {
   flagshipCaseStudies,
 } from "../data";
 
-const RESUME_URL = "/Resume.png";
+const RESUME_URL = "/resume.pdf";
 const GITHUB_URL = "https://github.com/Nimanoro";
 
 const container = {
@@ -28,10 +28,8 @@ function ProofChip({ children, tone = "muted" }) {
   const base =
     "inline-flex items-center rounded-full px-4 py-2 text-sm border backdrop-blur";
   const tones = {
-    bright:
-      "bg-green-500/10 border-green-500/20 text-green-300",
-    muted:
-      "bg-gray-800/40 border-gray-700/60 text-gray-300",
+    bright: "bg-green-500/10 border-green-500/20 text-green-300",
+    muted: "bg-gray-800/40 border-gray-700/60 text-gray-300",
   };
   return <span className={`${base} ${tones[tone]}`}>{children}</span>;
 }
@@ -61,10 +59,12 @@ function FeaturedCard({ p }) {
               Public
             </span>
           )}
+
           {p.tags?.slice(0, 2)?.map((t) => (
             <span
               key={t}
-              className="text-xs px-3 py-1 rounded-full bg-gray-900/70 border border-gray-700 text-gray-300"
+              className="text-xs px-3 py-1 rounded-full bg-gray-900/70 border border-gray-700 text-gray-300 max-w-[160px] truncate"
+              title={t}
             >
               {t}
             </span>
@@ -78,17 +78,17 @@ function FeaturedCard({ p }) {
             <h3 className="text-white text-xl font-semibold mb-1">
               {p.title}
             </h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-200 text-sm leading-relaxed">
               {p.oneLiner || p.outcome}
             </p>
           </div>
-          <span className="text-gray-500 text-xs whitespace-nowrap">
+          <span className="text-gray-400 text-xs whitespace-nowrap">
             {p.date}
           </span>
         </div>
 
-        <p className="text-gray-300 mt-4 text-sm leading-relaxed">
-          <span className="text-gray-500">Outcome:</span>{" "}
+        <p className="text-gray-200 mt-4 text-sm leading-relaxed">
+          <span className="text-gray-400">Outcome:</span>{" "}
           {p.outcome}
         </p>
 
@@ -132,8 +132,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Top mini-nav (quietly increases clicks) */}
-
       {/* Hero */}
       <section className="min-h-screen w-full bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center px-6 pb-20 relative overflow-hidden">
         {/* background glow */}
@@ -155,22 +153,22 @@ export default function Home() {
 
           <motion.p
             variants={item}
-            className="text-gray-300 text-lg sm:text-xl max-w-2xl mb-10 leading-relaxed"
+            className="text-gray-300 text-lg sm:text-xl max-w-2xl mb-8 leading-relaxed"
           >
-            Full-stack + ML with a product mindset. I’m currently building{" "}
+            Full-stack engineer with strong backend + real-time systems.{" "}
             <span className="text-green-400 font-medium">
               LiftIQ (fitness feedback)
             </span>{" "}
-and shipping mobile products like StretchFlow.
-
+            is my current focus, and I also ship mobile products like StretchFlow.
           </motion.p>
 
           {/* Proof chips */}
-          <motion.div variants={item} className="flex flex-wrap gap-3 mb-10">
+          <motion.div variants={item} className="flex flex-wrap gap-3 mb-4">
             <ProofChip tone="bright">{proofStrip.users} users</ProofChip>
             <ProofChip>{proofStrip.projectsShipped} shipped</ProofChip>
             <ProofChip>{proofStrip.domains}</ProofChip>
           </motion.div>
+
 
           {/* CTAs */}
           <motion.div variants={item} className="flex flex-wrap items-center gap-4">
@@ -187,7 +185,16 @@ and shipping mobile products like StretchFlow.
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold py-3 px-6 rounded-xl text-lg transition duration-200 border border-gray-700"
             >
-              Resume
+              Resume (PDF)
+            </a>
+
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold py-3 px-6 rounded-xl text-lg transition duration-200 border border-gray-700"
+            >
+              GitHub
             </a>
 
             <Link
@@ -198,13 +205,10 @@ and shipping mobile products like StretchFlow.
             </Link>
           </motion.div>
 
-          <motion.p variants={item} className="text-gray-500 text-sm mt-8">
-            Based in Vancouver · Shipping consistently · Last updated Jan 2026
-          </motion.p>
         </motion.div>
       </section>
 
-      {/* Featured work preview (huge conversion boost) */}
+      {/* Featured work preview */}
       <section className="border-t border-gray-800 bg-gradient-to-b from-gray-900/50 to-black py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -218,9 +222,9 @@ and shipping mobile products like StretchFlow.
               <h2 className="text-white text-2xl sm:text-3xl font-bold">
                 Featured work
               </h2>
-              <p className="text-gray-400 mt-2 max-w-2xl">
-                The projects I’d point to if I had 30 seconds to prove I’m not
-                just collecting GitHub repos.
+              <p className="text-gray-400 mt-2 max-w-2xl leading-relaxed">
+                Projects with real users, measurable outcomes, and clear engineering
+                tradeoffs.
               </p>
             </div>
             <Link
@@ -263,12 +267,20 @@ and shipping mobile products like StretchFlow.
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-300 text-sm sm:text-base"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-200 text-sm sm:text-base"
           >
-            <p><span className="text-gray-500">Building:</span> {now.building}</p>
-            <p><span className="text-gray-500">Seeking:</span> {now.seeking}</p>
-            <p><span className="text-gray-500">Learning:</span> {now.learning}</p>
-            <p><span className="text-gray-500">Latest ship:</span> {now.latestShip}</p>
+            <p>
+              <span className="text-gray-400">Building:</span> {now.building}
+            </p>
+            <p>
+              <span className="text-gray-400">Seeking:</span> {now.seeking}
+            </p>
+            <p>
+              <span className="text-gray-400">Learning:</span> {now.learning}
+            </p>
+            <p>
+              <span className="text-gray-400">Latest ship:</span> {now.latestShip}
+            </p>
           </motion.div>
         </div>
       </section>
@@ -296,9 +308,12 @@ and shipping mobile products like StretchFlow.
                 transition={{ duration: 0.55, delay: i * 0.08 }}
                 className="bg-gray-800/40 rounded-2xl p-6 border border-gray-800"
               >
-                <p className="text-gray-200 leading-relaxed mb-4">“{t.quote}”</p>
-                <footer className="text-gray-500 text-sm">
-                  — {t.source}{t.role ? ` · ${t.role}` : ""}
+                <p className="text-gray-200 leading-relaxed mb-4">
+                  “{t.quote}”
+                </p>
+                <footer className="text-gray-400 text-sm">
+                  - {t.source}
+                  {t.role ? ` · ${t.role}` : ""}
                 </footer>
               </motion.blockquote>
             ))}
