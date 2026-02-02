@@ -164,7 +164,7 @@ export const shippedExperiments = [
     title: "Number Detector",
     description: "Digit classifier with a live drawing UI (train → test → iterate).",
     image:
-      "Pictures/number_detector.png",
+      "Pictures/Number_detector.png",
     links: {
       github: "https://github.com/Nimanoro/number-detector",
       live: null,
@@ -240,7 +240,7 @@ export const shippedExperiments = [
     title: "Stock Portfolio Analyzer",
     description: "Portfolio simulation + indicators (RSI, MACD, Bollinger) with per-stock charts.",
     image:
-      "/Pictures/stock-portfolio.png",
+      "/Pictures/Stock-portfolio.png",
     links: {
       github: "https://github.com/Nimanoro/Stock-portfolio",
       live: null,
