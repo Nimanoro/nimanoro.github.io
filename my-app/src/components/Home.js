@@ -148,25 +148,21 @@ export default function Home() {
             variants={item}
             className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight"
           >
-            I build and ship products that people actually use.
+            I build products and the systems behind them.
           </motion.h1>
 
           <motion.p
             variants={item}
             className="text-gray-300 text-lg sm:text-xl max-w-2xl mb-8 leading-relaxed"
           >
-            Full-stack engineer with strong backend + real-time systems.{" "}
-            <span className="text-green-400 font-medium">
-              LiftIQ (fitness feedback)
-            </span>{" "}
-            is my current focus, and I also ship mobile products like StretchFlow.
+            I’m a UBC Computer Science student and founder of Repolve, a live iPhone strength-training app. I’m developing a personalized programming engine around training goals, schedules, and equipment.
           </motion.p>
 
           {/* Proof chips */}
           <motion.div variants={item} className="flex flex-wrap gap-3 mb-4">
-            <ProofChip tone="bright">{proofStrip.users} users</ProofChip>
-            <ProofChip>{proofStrip.projectsShipped} shipped</ProofChip>
-            <ProofChip>{proofStrip.domains}</ProofChip>
+            <ProofChip tone="bright">Repolve · Live on iPhone</ProofChip>
+            <ProofChip>500+ TestFlight testers</ProofChip>
+            <ProofChip>Programming engine · Internal beta</ProofChip>
           </motion.div>
 
 
@@ -198,10 +194,10 @@ export default function Home() {
             </a>
 
             <Link
-              to="/contact"
+              to="/decisions"
               className="inline-flex items-center justify-center text-gray-300 hover:text-white font-medium transition duration-200"
             >
-              Contact →
+              How I make decisions →
             </Link>
           </motion.div>
 
@@ -249,6 +245,14 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-t border-gray-800 bg-[#070b0b] px-6 py-16">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+          <div><p className="text-green-400 text-sm uppercase tracking-widest font-semibold">Decision journal</p>
+            <h2 className="text-white text-3xl font-bold mt-3">The reasoning behind the work.</h2>
+            <p className="text-gray-400 mt-3 max-w-2xl">Alternatives, trade-offs, evidence, and what could change my mind. Not just a highlight reel.</p></div>
+          <Link to="/decisions" className="text-green-300 font-semibold whitespace-nowrap hover:text-green-200">Explore decisions →</Link>
+        </div>
+      </section>
       {/* Now */}
       <section className="border-t border-gray-800 bg-gray-900/50 py-16 px-6">
         <div className="max-w-4xl mx-auto">
