@@ -14,10 +14,10 @@ export const proofStrip = {
 
 // ─── Now section ─────────────────────────────────────────────────────────
 export const now = {
-  building: "LiftIQ (AI strength feedback) as part of Entrepreneurship coop with UBC",
-  seeking: "Summer 2026 SWE (Backend / Mobile / Full-Stack)",
-  learning: "real-time feedback loops, product fundamentals",
-  latestShip: "LiftIQ - working prototype",
+  building: "Repolve: live strength app, with personalized programming in internal beta",
+  seeking: "Beta feedback, collaborators, and founder conversations",
+  learning: "training adherence, retention, and product judgment",
+  latestShip: "Repolve on the App Store; programming generator in internal testing",
 };
 
 // ─── Testimonials (2 is enough) ───────────────────────────────────────────
